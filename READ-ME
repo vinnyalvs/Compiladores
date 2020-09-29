@@ -1,0 +1,23 @@
+Feito por Vinicius Alberto Alves da Silva
+
+Construido com Java 13, mas não usa nenhuma biblioteca especial (acredito eu)
+
+Para compilar: javac BasicCalculator.java
+Para executar: java  BasicCalculator Teste1.txt
+
+Pasta passar o endereço do arquivo como parâmetro
+
+
+Lógica pensada:
+
+Estou usando duas pilhas, uma para os operadores e outra para os valores (variáveis ou inteiros) para verificar a precedência, se ao inserir novo símbolo na pila de operadores tem três casos:
+1) Pilha de operadores vazia : pode inserir qualquer simbolo
+2) Se a pilha e operadores não esta vazia:
+       Estou inserindo * se na o último da pilha é +
+     ( se a precedência do que for inserir é maior pode inserir sem problemas) 
+3) Se a pilha e operadores não esta vazia:
+      Se vou inserir + e na pilha de operadores esta um * calculo recursivamente o valor da pilha de valores desempilhando o que for necessário  e colocado o resultado na pilha de valores
+   ( se a precedência do que for inserir é menor, calcula valor da pilha) 
+
+
+Coisas relacionadas a leitura do arquivo passo a passo do precedimento e reconhecimento dos tokens estão melhor descritas nos comentáriso do código
